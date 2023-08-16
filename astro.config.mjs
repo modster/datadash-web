@@ -5,10 +5,10 @@ import cloudflare from "@astrojs/cloudflare"
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  adapter: cloudflare(),
-  vite: {
-    build: {
-      minify: false,
-    },
-  }
+  adapter: cloudflare({ mode: "directory" }),
+  // vite: {
+  //   build: {
+  //     minify: false,
+  //   },
+  // }
 })
